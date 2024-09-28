@@ -51,3 +51,4 @@ if [ "$#" == "0" ]; then
 else
     # 以 runner 用户运行开发者指定的命令
     exec gosu runner "$@"
+fi
