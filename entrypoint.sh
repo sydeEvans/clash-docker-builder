@@ -47,6 +47,10 @@ nginx
 #===========================================================================================
 if [ "$#" == "0" ]; then
     # 用户没有输入命令，则启动 clash
+    echo '###################'
+    echo 'clash version'
+    gosu runner clash -v
+    echo '###################'
     exec gosu runner clash -d /home/runner/.config/clash
 else
     # 以 runner 用户运行开发者指定的命令
